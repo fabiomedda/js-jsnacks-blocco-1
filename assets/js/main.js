@@ -347,3 +347,59 @@ for (var key in array15CmLess) {
 console.log(pesoTotPlus + " grammi");
 console.log(pesoTotLess + " grammi");
 
+/*
+JSnack 4
+Scrivi una funzione che fonda due array (con lo stesso
+numero di elementi) prendendo alternativamente gli
+elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+*/
+
+var array1 = ["a","b","c","d"];
+var array2 = [1,2,3,4];
+
+
+function meltArray(array1Param, array2Param) {
+
+    if (array1Param.length === array2Param.length) {
+        
+        var array3 = [];
+
+        for (var i = 0; i < array1Param.length; i++) {
+            array3.push(array1[i]);
+            array3.push(array2[i]);
+        }
+
+        return array3;
+
+    }
+
+}
+
+var meltArray = meltArray(array1, array2);
+console.log(meltArray);
+
+/*
+JSnack 5
+Scrivi una funzione che accetti tre argomenti:
+un array e due numeri (“a” più piccolo di “b” e “b” grande al
+massimo quanto il numero di elementi dell’array).
+La funzione ritornerà un nuovo array con i valori che
+hanno la posizione compresa tra “a” e “b”
+*/
+
+var arraySet = [0,1,2,3,4,5,6,7,8,9];
+var x = 1;
+var y = 5;
+
+function arrayRatio(array, number1, number2) {  
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (i >= number1 && i <= number2) {
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+var array10 = arrayRatio(arraySet,x,y);
+console.log(array10);
